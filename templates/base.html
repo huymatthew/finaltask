@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Lời Triệu Hồn{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    {% endblock %}
+  </head>
+  <body>
+    <div class="veil"></div>
+
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="{% url 'home' %}">Lời Triệu Hồn<br/><span class="brand-sub">Miếu Ngã Ba</span></a>
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Mở menu">☰</button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="{% url 'home' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Trang chủ</a></li>
+            <li><a href="{% url 'games' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'games' %}aria-current="page"{% endif %}>Trò chơi</a></li>
+            <li><a href="{% url 'story' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'story' %}aria-current="page"{% endif %}>Cốt truyện</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      {% block header_title %}
+      <h1 class="title blood-font">LỜI TRIỆU HỒN Ở MIẾU NGÃ BA</h1>
+      <p class="subtitle">Câu lạc bộ Khoa CNTT — Halloween Adventure 2025</p>
+      {% endblock %}
+    </header>
+
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Địa điểm: Miếu Ngã Ba — Thời lượng sự kiện: 120–150 phút • 4 đội • 6–7 thành viên/đội</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
