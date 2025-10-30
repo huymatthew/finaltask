@@ -7,67 +7,56 @@
 {% endblock %}
 
 {% block content %}
+  <section class="card">
+    <h2>Thông tin sự kiện</h2>
+    <ul>
+      <li><strong>Số lượng đội:</strong> 4 đội</li>
+      <li><strong>Số lượng thành viên mỗi đội:</strong> 6–7 người</li>
+      <li><strong>Thời gian diễn ra:</strong> 120-150 phút (chỉ dành cho trò chơi)</li>
+    </ul>
+  </section>
   <section class="card game-card">
     <div class="game-header">
-      <h2>🕯️ Trò 1 — Lối gọi hồn</h2>
-      <span class="time-badge">14:30 – 15:10</span>
+      <h2>🔥 Trò 1 — Giữ lửa cô hồn</h2>
     </div>
-    <p><strong>Mục đích:</strong> Mở màn, tạo không khí rùng rợn</p>
-    <p>Máy ghi âm tự bật, tiếng thì thầm vang lên từ hư không. Người chơi bắt đầu bước vào thế giới của oán linh, nơi ranh giới giữa âm và dương mờ nhạt.</p>
+    <p><strong>Mục đích:</strong> Giữ cho ngọn lửa linh hồn không bị tắt khi đi qua "Cánh cổng âm".</p>
+    {{ game1|safe }}
   </section>
 
   <section class="card game-card">
     <div class="game-header">
-      <h2>👻 Trò 2 — Tam sao thất bản</h2>
-      <span class="time-badge">15:10 – 15:45</span>
+      <h2>🔥 Trò 2 — Người dẫn lễ trong sương</h2>
     </div>
-    <p><strong>Thử thách:</strong> Truyền miệng câu chú cổ</p>
-    <p>Câu nói bị biến dạng sau nhiều lần truyền, như tiếng thì thầm của linh hồn muốn giao tiếp. Mỗi sai lệch đều mang một ý nghĩa đen tối.</p>
+    <p><strong>Mục đích:</strong> Kiểm tra khả năng phối hợp và tin tưởng giữa các thành viên trong môi trường nhiễu âm.</p>
+    
+    {{ game2|safe }}
   </section>
 
   <section class="card game-card">
     <div class="game-header">
-      <h2>🔥 Trò 4 — Bùa lửa</h2>
-      <span class="time-badge">16:20 – 16:55</span>
+      <h2>🔥 Trò 3 — Gọi hồn </h2>
     </div>
-    <p><strong>Nhiệm vụ:</strong> Khám phá tội lỗi gia tộc</p>
-    <p>Tiết lộ những bí mật đen tối trong quá khứ. Người chơi phải tìm hiểu và ghép nối các manh mối để tiến đến phần giải mã cuối cùng.</p>
+    <p><strong>Mục đích:</strong> Thử thách trí nhớ và khả năng truyền đạt thông tin – tượng trưng cho việc "truyền sai chú thì hồn nhập nhầm".</p>
+
+    {{ game3|safe }}
   </section>
 
   <section class="card game-card">
     <div class="game-header">
-      <h2>⚱️ Trò 5 — Giải mã lời nguyền</h2>
-      <span class="time-badge">16:55 – 18:30</span>
+      <h2>🗝️ Trò 4 — Giải mật thư nhận công cụ</h2>
     </div>
-    <p><strong>Cao trào:</strong> Phá vỡ lời nguyền nghìn năm</p>
-    <p>Sắp xếp 4 vật chứng theo đúng trật tự để giải thoát linh hồn. Một sai lầm có thể khiến bóng tối nuốt chửng tất cả.</p>
-    <div class="artifacts">
-      <span class="artifact">💍 Vòng bạc</span>
-      <span class="artifact">📜 Lá bùa</span>
-      <span class="artifact">✉️ Thư cũ</span>
-      <span class="artifact">🪞 Mảnh gương</span>
-    </div>
+    <p><strong>Mục đích:</strong> Giải mã ký hiệu và ghép hình để lấy công cụ.</p>
+    
+    {{ game4|safe }}
   </section>
 
-  <section class="card mini-games">
-    <h2>🎯 Các thử thách phụ</h2>
-    <div class="game-grid">
-      <div class="mini-game">
-        <h3>🕯️ Giữ lửa</h3>
-        <p>Người cầm nến phải đi qua cổng nhiễu mà không để ngọn lửa linh hồn tắt</p>
-      </div>
-      <div class="mini-game">
-        <h3>🌫️ Người dẫn lễ trong sương</h3>
-        <p>Một người bị bịt mắt, một người dẫn đường im lặng trong màn sương dày đặc</p>
-      </div>
-      <div class="mini-game">
-        <h3>🔮 Gọi hồn</h3>
-        <p>Trò truyền miệng gây nhiễu, mỗi từ sai có thể triệu hồi thực thể khác</p>
-      </div>
-      <div class="mini-game">
-        <h3>🗝️ Giải mật thư</h3>
-        <p>Giải mã ký hiệu cổ xưa, ghép hình để lấy công cụ thiêng liêng</p>
-      </div>
+  <section class="card game-card">
+    <div class="game-header">
+      <h2>🔥 Trò 5 — Đố anh bắt được em</h2>
     </div>
+    <p><strong>Mục đích:</strong> Tăng tính kịch tính và thử thách sự nhanh nhẹn, phối hợp của đội trong việc thu thập hiện vật để phá lời nguyền.</p>
+    
+    {{ game5|safe }}
+    
   </section>
 {% endblock %}

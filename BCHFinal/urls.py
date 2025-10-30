@@ -19,10 +19,11 @@ from django.urls import path
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
+from BCHFinal import views
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
-    path('games/', TemplateView.as_view(template_name='games.html'), name='games'),
+    path('games/', views.games, name='games'),
     path('story/', TemplateView.as_view(template_name='story.html'), name='story'),
     path('admin/', admin.site.urls),
 ]

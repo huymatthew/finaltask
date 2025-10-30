@@ -27,7 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Allow enabling debug via environment variable during development.
+_debug_env = os.getenv('DJANGO_DEBUG', 'True')
+DEBUG = str(_debug_env).lower() in ('1', 'true', 'yes')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'itdut.site', 'www.itdut.site']
 
@@ -116,10 +118,12 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# Use an absolute URL path so the `{% static %}` tag generates '/static/...' URLs
+STATIC_URL = '/static/'
 
 # Include the top-level `static/` directory during development and
 # make the project-level `templates/` directory available to the template

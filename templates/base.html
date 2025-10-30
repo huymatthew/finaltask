@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
     <title>{% block title %}Lời Triệu Hồn{% endblock %}</title>
     {% block head %}
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
@@ -19,20 +20,44 @@
         <nav id="main-nav" class="main-nav" aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="{% url 'home' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Trang chủ</a></li>
-            <li><a href="{% url 'games' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'games' %}aria-current="page"{% endif %}>Trò chơi</a></li>
             <li><a href="{% url 'story' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'story' %}aria-current="page"{% endif %}>Cốt truyện</a></li>
+            <li><a href="{% url 'games' %}" {% if request and request.resolver_match and request.resolver_match.url_name == 'games' %}aria-current="page"{% endif %}>Trò chơi</a></li>
           </ul>
         </nav>
       </div>
 
       {% block header_title %}
       <h1 class="title blood-font">LỜI TRIỆU HỒN Ở MIẾU NGÃ BA</h1>
-      <p class="subtitle">Câu lạc bộ Khoa CNTT — Halloween Adventure 2025</p>
+      <p class="subtitle">  The Cursed ITinerary - Final Task Event - BCH Liên chi đoàn khoa CNTT</p>
       {% endblock %}
     </header>
 
     <main class="container">
       {% block content %}{% endblock %}
+      <section class="card game-card">
+        <div class="game-header">
+          <div class="countdown-wrap" aria-label="Đồng hồ đếm ngược">
+            <div id="countdown" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+              <div class="countdown-item">
+                <span id="days" class="countdown-number">--</span>
+                <span class="countdown-label">ngày</span>
+              </div>
+              <div class="countdown-item">
+                <span id="hours" class="countdown-number">--</span>
+                <span class="countdown-label">giờ</span>
+              </div>
+              <div class="countdown-item">
+                <span id="minutes" class="countdown-number">--</span>
+                <span class="countdown-label">phút</span>
+              </div>
+              <div class="countdown-item">
+                <span id="seconds" class="countdown-number">--</span>
+                <span class="countdown-label">giây</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="cta">
         <a id="register-btn" class="btn" href="https://vnshort.com/Jr9D">Đăng ký</a>
       </div>
