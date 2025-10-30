@@ -1,3 +1,4 @@
 staticfiles/
 .env
 .venv/
+/BCHFinal/settings.py
