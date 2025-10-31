@@ -74,3 +74,20 @@ function startCountdownTimer() {
   setInterval(updateCountdown, 1000);
 };
 startCountdownTimer();
+
+function jumpscare() {
+  
+  const scriptEl = document.currentScript || document.querySelector('script[src$="script.js"]') || document.scripts[document.scripts.length-1];
+  const baseUrl = scriptEl && scriptEl.src
+    ? scriptEl.src.replace(/\/[^\/]*$/, '/')
+    : (window.location.origin + '/static/');
+  const audio = new Audio(new URL('sound/jumpscare.mp3', baseUrl).href);
+  audio.play();
+  const img = document.getElementById('jumpscare-img');
+  if (img) {
+    img.style.display = 'block';
+    setTimeout(() => {
+      img.style.display = 'none';
+    }, 3000);
+  }
+}

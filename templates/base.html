@@ -11,6 +11,10 @@
     {% endblock %}
   </head>
   <body>
+    <div class="jumpscare-button" onclick="jumpscare()"><img src="{% static 'images/ghost.gif' %}" alt="Jumpscare Button" /><img style="width: 40%; height: 40%;" src="{% static 'images/arrow.png' %}" alt="Arrow" /></div>
+    <div id="jumpscare-img" class="jumpscare-img" style="display:none;">
+      <img src="{% static 'images/jumpscare.png' %}" alt="Jumpscare" />
+    </div>
     <div class="veil"></div>
 
     <header class="site-header">
