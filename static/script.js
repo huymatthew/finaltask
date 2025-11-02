@@ -76,7 +76,6 @@ function startCountdownTimer() {
 startCountdownTimer();
 
 function jumpscare() {
-  
   const scriptEl = document.currentScript || document.querySelector('script[src$="script.js"]') || document.scripts[document.scripts.length-1];
   const baseUrl = scriptEl && scriptEl.src
     ? scriptEl.src.replace(/\/[^\/]*$/, '/')
