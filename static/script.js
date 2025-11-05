@@ -1,5 +1,21 @@
 // script.js — đơn giản: nút đăng ký là placeholder
+
+// Preload jumpscare audio to prevent delay
+let jumpscareAudio = null;
+
 document.addEventListener('DOMContentLoaded', function(){
+  // Get preloaded audio element
+  jumpscareAudio = document.getElementById('jumpscare-audio');
+  
+  // Ensure audio is fully loaded
+  if (jumpscareAudio) {
+    jumpscareAudio.addEventListener('canplaythrough', function() {
+      console.log('Jumpscare audio preloaded successfully');
+    });
+    jumpscareAudio.addEventListener('error', function() {
+      console.log('Failed to load jumpscare audio');
+    });
+  }
   // register button logic
   var btn = document.getElementById('register-btn');
   if(btn){
@@ -76,12 +92,15 @@ function startCountdownTimer() {
 startCountdownTimer();
 
 function jumpscare() {
-  const scriptEl = document.currentScript || document.querySelector('script[src$="script.js"]') || document.scripts[document.scripts.length-1];
-  const baseUrl = scriptEl && scriptEl.src
-    ? scriptEl.src.replace(/\/[^\/]*$/, '/')
-    : (window.location.origin + '/static/');
-  const audio = new Audio(new URL('sound/jumpscare.mp3', baseUrl).href);
-  audio.play();
+  // Use preloaded audio for instant playback
+  if (jumpscareAudio) {
+    jumpscareAudio.currentTime = 0; // Reset to beginning in case it was played before
+    jumpscareAudio.volume = 0.8; // Set volume level
+    jumpscareAudio.play().catch(e => {
+      console.log('Audio play failed (user interaction required):', e);
+    });
+  }
+  
   const img = document.getElementById('jumpscare-img');
   if (img) {
     img.style.display = 'block';

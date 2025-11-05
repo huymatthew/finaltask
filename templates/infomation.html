@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Thông tin — Lời Triệu Hồn{% endblock %}
+
+{% block header_title %}
+  <h1 class="title">Thông tin sự kiện</h1>
+  <p class="subtitle">Ban tổ chức và timeline dự án</p>
+{% endblock %}
+
+{% block content %}
+  <section class="card">
+    <h2>🎭 Ban Tổ Chức</h2>
+    <p>Đội ngũ phát triển sự kiện <strong>"Lời Triệu Hồn - Miếu Ngã Ba"</strong></p>
+    
+    <div class="organizer-table">
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Họ và Tên</th>
+            <th>Nhiệm vụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>Nghiêm Thị Diễm Quỳnh</strong></td>
+            <td>Trưởng nhóm, lên kế hoạch, quản lý chung, thiết kế chính</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>Nguyễn Minh Nhật</strong></td>
+            <td>Chịu trách nhiệm chính về cốt truyện, tham gia hỗ trợ công tác tổ chức</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>Nguyễn Thành Trung</strong></td>
+            <td>Chịu trách nhiệm chính về quay dựng video</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>Nguyễn Minh Phát</strong></td>
+            <td>Xây dựng trò chơi, tham gia hỗ trợ công tác tổ chức</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>Võ Phi Nhật Huy</strong></td>
+            <td>Tham gia hỗ trợ công tác tổ chức, Thiết kế ấn phẩm, Xuất bản ấn phẩm truyền thông</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>Đặng Hoàng Phương Anh</strong></td>
+            <td>Lên kế hoạch, tham gia hỗ trợ công tác tổ chức</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><strong>Phan Phú Quân</strong></td>
+            <td>Lên kế hoạch, quản lý hậu cần</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📅 Timeline Sự Kiện</h2>
+    <img src="{% static 'images/timeline.png' %}" alt="Timeline Dự Án" style="width:100%;height:auto;"/>
+  </section>
+
+  <section class="card">
+    <h2>Lời Cảm Ơn</h2>
+    <div class="thank-you-note">
+      <div class="quote">
+        <blockquote>
+          Chúng mình xin gửi lời cảm ơn chân thành đến tất cả các thầy cô, anh chị đã quan tâm tạo điều kiện, môi trường để cho các bạn ứng viên Ban Chấp Hành Liên Chi Đoàn khoa CNTT có cơ hội rèn luyện và thể hiện bản thân. Cảm ơn các anh chị cựu thành viên, các thành viên và các bạn đã quan tâm và ủng hộ sự kiện "Lời Triệu Hồn - Miếu Ngã Ba".
+        </blockquote>
+        <cite>— Ban Tổ Chức</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>📞 Liên Hệ</h2>
+    <div class="contact-info">
+    <p>Sự kiện được tổ chức:</p>
+    <div class="contact-item">
+      <strong>🎓 Trường:</strong>
+      <span>Trường Đại học Bách Khoa - Đại Học Đà Nẵng (Da Nang University of Science and Technology)</span>
+    </div>
+    <div class="contact-item">
+      <strong>📨 Ban tổ chức:</strong>
+      <span>Ban Chấp Hành Liên Chi Đoàn khoa Công Nghệ Thông Tin</span>
+    </div>
+    <div class="contact-item">
+      <strong>👥 Nhóm thực hiện:</strong>
+      <span>Nhóm 01</span>
+    </div>
+    <div class="contact-item">
+      <strong>🧭 Leader:</strong>
+      <span>Nghiêm Thị Diễm Quỳnh</span>
+    </div>
+    </div>
+  </section>
+{% endblock %}
