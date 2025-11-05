@@ -432,9 +432,9 @@ blockquote::before{
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 64px;
-  height: 64px;
-  bottom: 20px;
+  width: 96px;
+  height: 96px;
+  bottom: 100px;
   left: 150px;
   color: #000;
   font-weight: 700;
@@ -586,21 +586,8 @@ blockquote::before{
   .organizer-table td {
     padding: 8px 12px;
   }
-  
-  .timeline::before {
-    left: 20px;
-  }
-  
-  .timeline-marker {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    margin-right: 1rem;
-  }
-  
-  .timeline-content {
-    padding: 1rem;
-    margin-top: 5px;
+  .jumpscare-button{
+    position: static;
   }
   
   .contact-item {

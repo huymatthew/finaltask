@@ -12,13 +12,8 @@
   </head>
   <body>
     <audio id="jumpscare-audio" preload="auto" style="display: none;">
-      <source src="{% static 'sound/jumpscare.mp3' %}" type="audio/mpeg">
+      <source src="{% static 'sound/fjum.mp3' %}" type="audio/mpeg">
     </audio>
-    
-    <div class="jumpscare-button" onclick="jumpscare()">
-      <img style="width: 140%; height: 140%;" src="{% static 'images/ghost.gif' %}" alt="Jumpscare Button" />
-      <img style="width: 140%; height: 140%; position: translateY(-20%);" src="{% static 'images/click.gif' %}" alt="Arrow" />
-    </div>
     <div id="jumpscare-img" class="jumpscare-img" style="display:none;">
       <img src="{% static 'images/jumpscare.png' %}" alt="Jumpscare" />
     </div>
@@ -70,6 +65,10 @@
           </div>
         </div>
       </section>
+      <div class="jumpscare-button" onclick="jumpscare()">
+      <img style="width: 140%; height: 140%;" src="{% static 'images/ghost.gif' %}" alt="Jumpscare Button" />
+      <img style="width: 120%; height: 120%; position: translateY(-20%);z-index: 10;" src="{% static 'images/click.gif' %}" alt="Arrow" />
+    </div>
       <div class="cta">
         <a id="register-btn" class="btn" href="https://forms.gle/xZvb9srwGGTiom3W7">Đăng ký</a>
       </div>
